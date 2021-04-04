@@ -1,0 +1,283 @@
+<div class="container body">
+    <div class="main_container">
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="">
+                <div class="page-title">
+                    <div class="title_left">
+                        <h3>Franchisee Profile</h3>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 ">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>User Report <small>Activity report</small></h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content" *ngIf="currentFranchisee">
+                                <div class="col-md-3 col-sm-3  profile_left">
+                                    <div class="profile_img">
+                                        <div id="crop-avatar">
+                                            <!-- Current avatar -->
+                                            <img class="img-fluid avatar-view" [src]="imageUrl" alt="Avatar">
+                                        </div>
+                                    </div>
+                                    <h3>{{currentFranchisee.firstName}} {{currentFranchisee.lastName}}</h3>
+
+                                    <ul class="list-unstyled user_data">
+                                        <li><i class="fa fa-map-marker user-profile-icon"></i>
+                                            {{currentFranchisee.city}}, {{currentFranchisee.district}},
+                                            {{currentFranchisee.AddState}}
+                                        </li>
+
+                                        <li class="m-top-xs">
+                                            <i class="fa fa-at user-profile-icon"></i>
+                                            {{currentFranchisee.email}}
+                                        </li>
+                                    </ul>
+
+                                    <a class="btn btn-success" (click)="goToEditFranProfile()"><i
+                                            class="fa fa-edit m-right-xs"></i>Edit Profile</a>
+                                    <br />
+
+                                    <a class="btn btn-warning" (click)="goToAdditionalDetails()"><i
+                                            class="fa fa-plus m-right-xs"></i>Add Details</a>
+                                    <br />
+                                </div>
+                                <div class="col-md-9 col-sm-9 ">
+                                    <div class="" role="tabpanel" data-example-id="togglable-tabs">
+                                        <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+                                            <li role="presentation" class="active"><a href="#tab_content1" role="tab"
+                                                    id="profile-tab2" data-toggle="tab" aria-expanded="false">Leads</a>
+                                            </li>
+                                            <li role="presentation" class=""><a href="#tab_content2" id="personal-tab"
+                                                    role="tab" data-toggle="tab" aria-expanded="true">Personal
+                                                    Details</a>
+                                            </li>
+                                            <li role="presentation" class=""><a href="#tab_content3" role="tab"
+                                                    id="occupation-tab" data-toggle="tab"
+                                                    aria-expanded="false">Occupation Details
+                                                </a>
+                                            </li>
+                                            <li role="presentation" class=""><a href="#tab_content4" role="tab"
+                                                    id="profile-tab2" data-toggle="tab" aria-expanded="false">Bank
+                                                    Details</a>
+                                            </li>
+
+                                        </ul>
+                                        <div id="myTabContent" class="tab-content">
+                                            <div role="tabpanel" class="tab-pane fade show active" id="tab_content1"
+                                                aria-labelledby="profile-tab">
+
+                                                <table class="table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th style="width:50%">Total Leads Created</th>
+                                                            <td>{{currentFranchisee.total_Leads_created}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Total Accepted Leads</th>
+                                                            <td>{{currentFranchisee.total_Accepeted_leads}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Total Rejected Leads</th>
+                                                            <td>{{currentFranchisee.total_Rejected_Leads}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Total Approved Loans</th>
+                                                            <td>{{currentFranchisee.total_Approved_Loan}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Total Rejected Loans</th>
+                                                            <td>{{currentFranchisee.total_Rejected_Loans}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Total Pending Loans</th>
+                                                            <td>{{currentFranchisee.total_pending_Loans}}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane fade" id="tab_content2"
+                                                aria-labelledby="profile-tab">
+                                                <table class="table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th style="width:50%">First Name</th>
+                                                            <td>{{currentFranchisee.firstName}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Middle Name</th>
+                                                            <td>{{currentFranchisee.middleName}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Last Name</th>
+                                                            <td>{{currentFranchisee.lastName}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Date of Birth:</th>
+                                                            <td>{{currentFranchisee.dateOfBirth | date}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Gender:</th>
+                                                            <td>{{currentFranchisee.gender}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>PAN</th>
+                                                            <td>{{currentFranchisee.pan}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Aadhar</th>
+                                                            <td>{{currentFranchisee.aadhar}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Mobile Number</th>
+                                                            <td>{{currentFranchisee.mobileNumber}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Email</th>
+                                                            <td>{{currentFranchisee.email}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Address</th>
+                                                            <td>{{currentFranchisee.homeAddress}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>City</th>
+                                                            <td>{{currentFranchisee.city}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Taluka</th>
+                                                            <td>{{currentFranchisee.taluka}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>District</th>
+                                                            <td>{{currentFranchisee.district}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Pin Code</th>
+                                                            <td>{{currentFranchisee.pinCode}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>State</th>
+                                                            <td>{{currentFranchisee.AddState}}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane fade" id="tab_content3"
+                                                aria-labelledby="profile-tab">
+
+
+                                                <table class="table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th style="width:50%">Office Name</th>
+                                                            <td>{{currentOffice.franOffName}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Mobile / Telephone Number</th>
+                                                            <td>{{currentOffice.OffNumber}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Office Type</th>
+                                                            <td>{{currentOffice.OffType}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Address</th>
+                                                            <td>{{currentOffice.OfficeAddress}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>City:</th>
+                                                            <td>{{currentOffice.Officecity}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Taluka</th>
+                                                            <td>{{currentOffice.Officetaluka}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>District</th>
+                                                            <td>{{currentOffice.Officedistrict}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Pin Code</th>
+                                                            <td>{{currentOffice.OfficepinCode}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>State</th>
+                                                            <td>{{currentOffice.OfficeState}}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane fade" id="tab_content4"
+                                                aria-labelledby="profile-tab">
+
+                                                <table class="table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th style="width:50%">Bank Name</th>
+                                                            <td>{{currentBank.Bank_Name}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Account Number</th>
+                                                            <td>{{currentBank.Account_Number}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Account Type</th>
+                                                            <td>{{currentBank.Account_Type}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>IFSC</th>
+                                                            <td>{{currentBank.IFSC}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Address</th>
+                                                            <td>{{currentBank.Branch_Address}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>City:</th>
+                                                            <td>{{currentBank.Bank_City}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Taluka</th>
+                                                            <td>{{currentBank.Bank_Taluka}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>District</th>
+                                                            <td>{{currentBank.Bank_District}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Pin Code</th>
+                                                            <td>{{currentBank.Bank_PinCode}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>State</th>
+                                                            <td>{{currentBank.Bank_State}}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /page content -->
+</div>

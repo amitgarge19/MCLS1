@@ -1,0 +1,724 @@
+<div class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <!-- page content -->
+            <div class="right_col" role="main">
+                <div class="  ">
+                    <div class="page-title">
+                        <div class="title_left">
+                            <img class="img-responsive avatar-view" src="images/picture.jpg" alt="Avatar"
+                                title="Change the avatar">
+                            <h3>{{currentCustomer.firstName}} {{currentCustomer.lastName}}</h3>
+
+                        </div>
+
+                        <div class="title_right">
+                            <div class="col-md-5 col-sm-5  form-group pull-right top_search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search for...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-secondary" type="button">Go!</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="x_content">
+
+                        <ul class="nav nav-tabs bar_tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="personalinfo-tab" data-toggle="tab" href="#personalinfo"
+                                    role="tab" aria-controls="personalinfo" aria-selected="true">Personal
+                                    Information</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="occup-tab" data-toggle="tab" href="#occup" role="tab"
+                                    aria-controls="occup" aria-selected="false">Occupational Information</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="finac-tab" data-toggle="tab" href="#finac" role="tab"
+                                    aria-controls="finac" aria-selected="false">Financial Information</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="bank-tab" data-toggle="tab" href="#bank" role="tab"
+                                    aria-controls="bank" aria-selected="false">Bank Information</a>
+
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="prop-tab" data-toggle="tab" href="#prop" role="tab"
+                                    aria-controls="bank" aria-selected="false">Property Details</a>
+
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="loandet-tab" data-toggle="tab" href="#loandet" role="tab"
+                                    aria-controls="loandet" aria-selected="false">Loan Details</a>
+
+                            </li>
+                        </ul>
+
+                        <div class="col-xs-9">
+                            <!-- Tab panes -->
+
+                            <div class="tab-content" id="v-pills-tabContent">
+                                <div class="tab-pane fade show " id="v-pills-personalinfo" role="tabpanel"
+                                    aria-labelledby="v-pills-personalinfo-tab">personalinfo Tab</div>
+                                <div class="tab-pane fade" id="v-pills-occup" role="tabpanel"
+                                    aria-labelledby="v-pills-occup-tab">... content</div>
+                                <div class="tab-pane fade" id="v-pills-finac" role="tabpanel"
+                                    aria-labelledby="v-pills-finac-tab">...content</div>
+                                <div class="tab-pane fade" id="v-pills-bank" role="tabpanel"
+                                    aria-labelledby="v-pills-bank-tab">...content</div>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                    </div>
+                </div>
+
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="personalinfo" role="tabpanel"
+                        aria-labelledby="personalinfo-tab">
+                        <div class="x_content">
+
+                            <div class="profile_img">
+                                <div id="crop-avatar">
+                                    <!-- Current avatar -->
+                                </div>
+
+                                <table class="table table-hover">
+                                    <tbody>
+                                        <tr>
+                                            <th>First Name</th>
+                                            <td>{{currentCustomer.firstName}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Middle Name</th>
+                                            <td>{{currentCustomer.middleName}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Last Name</th>
+                                            <td>{{currentCustomer.lastName}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Date Of Birth </th>
+                                            <td>{{currentCustomer.Date_of_birth | date}}</td>
+
+                                        </tr>
+                                        <tr>
+                                            <th>Email</th>
+                                            <td>{{currentCustomer.Email}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Mobile Number </th>
+                                            <td>{{currentCustomer.Mobile}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Gender</th>
+                                            <td>{{currentCustomer.Gender}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Pan Card</th>
+                                            <td>{{currentCustomer.PAN}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>UID</th>
+                                            <td>{{currentCustomer.Aadhar}}</td>
+                                        </tr>
+                                        <tr aria-colspan="2" align="center">
+                                            <th>Current Address</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Address</th>
+                                            <td>{{currentCustomer.Current_Address}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>City/Village</th>
+                                            <td>{{currentCustomer.C_City}}</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Taluka</th>
+                                            <td>{{currentCustomer.C_Taluka}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>District</th>
+                                            <td>{{currentCustomer.C_District}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th> Pin Code </th>
+                                            <td>{{currentCustomer.C_PinCode}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>State</th>
+                                            <td>{{currentCustomer.C_State}}</td>
+                                        </tr>
+
+                                        <tr aria-colspan="2" align="center">
+                                            <th>Permanent Address</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Address</th>
+                                            <td>{{currentCustomer.Permanent_Address}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>City/Village</th>
+                                            <td>{{currentCustomer.P_City}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Taluka</th>
+                                            <td>{{currentCustomer.P_Taluka}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>District</th>
+                                            <td>{{currentCustomer.P_District}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th> Pin Code </th>
+                                            <td>{{currentCustomer.P_PinCode}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>State</th>
+                                            <td>{{currentCustomer.P_State}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <a (click)="goToEditCustProfile()" class="btn btn-success"><i
+                                        class="fa fa-edit m-right-xs"></i>Edit Profile</a>
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="tab-pane fade" id="occup" role="tabpanel" aria-labelledby="occup-tab">
+                        <table class="table table-hover">
+                            <tbody>
+                                <tr>
+                                    <th>Occupational Category</th>
+                                    <td>{{currentCustOccupation.Occupational_Category}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Employer/Business Name</th>
+                                    <td>{{currentCustOccupation.Employer_Business_Name}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Address</th>
+                                    <td>{{currentCustOccupation.Address}}</td>
+                                </tr>
+                                <tr>
+                                    <th>City</th>
+                                    <td>{{currentCustOccupation.City}}</td>
+                                </tr>
+                                <tr>
+                                    <th> Taluka</th>
+                                    <td>{{currentCustOccupation.Taluka}}</td>
+                                </tr>
+                                <tr>
+                                    <th>District</th>
+                                    <td>{{currentCustOccupation.District}}</td>
+                                </tr>
+                                <tr>
+                                    <th>State</th>
+                                    <td>{{currentCustOccupation.State}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Pin Code</th>
+                                    <td>{{currentCustOccupation.PinCode}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Phone/Mobile No:</th>
+                                    <td>{{currentCustOccupation.Phone_No}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Employer Business Type</th>
+                                    <td>{{currentCustOccupation.Employer_Business_Type}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Legal Status</th>
+                                    <td>{{currentCustOccupation.Legal_Status}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Designation</th>
+                                    <td>{{currentCustOccupation.Designation}}</td>
+                                </tr>
+                                <tr>
+                                    <th> Employee Code</th>
+                                    <td>{{currentCustOccupation.Employee_Code}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Date of Joining or Commencement</th>
+                                    <td>{{currentCustOccupation.Date_of_Joining_Commencement}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Total Work Experience</th>
+                                    <td>{{currentCustOccupation.Total_work_experience}}</td>
+                                </tr>
+                                <tr>
+                                    <th>GSTIN</th>
+                                    <td>{{currentCustOccupation.GSTIN}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <div class="tab-pane fade" id="finac" role="tabpanel" aria-labelledby="finac-tab">
+                        <table class="table table-hover">
+                            <tbody>
+                                <tr>
+                                    <th>Gross Monthly Income</th>
+                                    <td>{{currentCustFinancial.Gross_monthly_income}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Average Monthly Expenses</th>
+                                    <td>{{currentCustFinancial.Average_monthly_expenses}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Assets SB Account</th>
+                                    <td>{{currentCustFinancial.Assets_SB_Account}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Immovable Property</th>
+                                    <td>{{currentCustFinancial.Immovable_Property}}</td>
+
+                                </tr>
+                                <tr>
+                                    <th>Current Balance_PF</th>
+                                    <td>{{currentCustFinancial.Current_balance_PF}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Shares Securities</th>
+                                    <td>{{currentCustFinancial.Shares_Securities}}</td>
+                                </tr>
+
+                                <tr>
+                                    <th>Fixed Deposits</th>
+                                    <td>{{currentCustFinancial.Fixed_Deposits}}</td>
+                                </tr>
+
+
+                                <tr>
+                                    <th>Others Assets</th>
+                                    <td>{{currentCustFinancial.Others_Assets}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Total Assets</th>
+                                    <td>{{currentCustFinancial.Total_Assets}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Net Monthly Income</th>
+                                    <td>{{currentCustFinancial.Net_Monthly_Income}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Credit Society Loan</th>
+                                    <td>{{currentCustFinancial.Credit_Society_Loan}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Home Loan</th>
+                                    <td>{{currentCustFinancial.Home_Loan}}</td>
+                                </tr>
+                                <tr>
+                                    <th>PF Loan</th>
+                                    <td>{{currentCustFinancial.PF_Loan}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Vehicle Loan </th>
+                                    <td>{{currentCustFinancial.Vehicle_Loan}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Personal Loan</th>
+                                    <td>{{currentCustFinancial.Personal_Loan}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Other Liabilities</th>
+                                    <td>{{currentCustFinancial.Other_Liabilities}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Total Liabilities</th>
+                                    <td>{{currentCustFinancial.Total_Liabilities}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <!-- Tab panes banks  strat -->
+                    <div class="tab-pane fade" id="bank" role="tabpanel" aria-labelledby="bank-tab">
+                        <table class="table table-hover">
+                            <tr>
+                                <th>Bank Name</th>
+                                <td>{{currentCustBank.Bank_Name}}</td>
+                            </tr>
+                            <tr>
+                                <th>Branch</th>
+                                <td>{{currentCustBank.Branch}}</td>
+                            </tr>
+                            <tr>
+                                <th>IFSC</th>
+                                <td>{{currentCustBank.IFSC}}</td>
+                            </tr>
+                            <tr>
+                                <th>Account No</th>
+                                <td>{{currentCustBank.Account_No}}</td>
+                            </tr>
+                            <tr>
+                                <th>Opening Date</th>
+                                <td>{{currentCustBank.Opening_Date}}</td>
+                            </tr>
+                            <tr>
+                                <th>Balance</th>
+                                <td>{{currentCustBank.Balance}}</td>
+                            </tr>
+                        </table>
+                        <div class="x_content">
+                            <!-- start accordion -->
+                            <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel">
+                                    <a class="panel-heading" role="tab" id="headingOne" data-toggle="collapse"
+                                        data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">
+                                        <h4 class="panel-title">Credit Card Details</h4>
+                                    </a>
+                                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                                        aria-labelledby="headingOne">
+                                        <div class="panel-body">
+                                            <table class="table table-bordered">
+
+                                                <tr>
+                                                    <th>Credit Card no.</th>
+                                                    <td>{{currentCustCC.Credit_Card_no}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Since</th>
+                                                    <td>{{currentCustCC.Since}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Bank Name</th>
+                                                    <td>{{currentCustCC.Bank_name}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Credit Limit</th>
+                                                    <td>{{currentCustCC.Credit_Limit}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Outstanding Amount</th>
+                                                    <td>{{currentCustCC.Outstanding_Amount}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Balance Term</th>
+                                                    <td>{{currentCustCC.Balance_Term}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Balance Outstanding</th>
+                                                    <td>{{currentCustCC.Balance_Outstanding}}</td>
+                                                </tr>
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--collaps start -->
+                                <div class="panel">
+                                    <a class="panel-heading collapsed" role="tab" id="headingTwo" data-toggle="collapse"
+                                        data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                                        aria-controls="collapseTwo">
+                                        <h4 class="panel-title">Insurance Details</h4>
+                                    </a>
+                                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+                                        aria-labelledby="headingTwo">
+                                        <div class="panel-body">
+
+                                            <table class="table table-bordered">
+
+                                                <tr>
+                                                    <th>Policy no.</th>
+                                                    <td>{{currentCustIns.Policy_no}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Policy Name</th>
+                                                    <td>{{currentCustIns.Policy_name}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Issued By</th>
+                                                    <td>{{currentCustIns.Issued_By}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Maturity Date</th>
+                                                    <td>{{currentCustIns.Maturity_date}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Policy Value</th>
+                                                    <td>{{currentCustIns.Policy_value}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Policy Type</th>
+                                                    <td>{{currentCustIns.Policy_Type}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Premium</th>
+                                                    <td>{{currentCustIns.Premium}}</td>
+                                                </tr>
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--collaps end -->
+                            </div>
+                            <!-- end of accordion bank -->
+                        </div>
+                    </div>
+
+                    <!-- /end Bankfin -->
+                    <!-- Property start -->
+                    <div class="tab-pane fade" id="prop" role="tabpanel" aria-labelledby="prop-tab">
+                        <table class="table table-hover">
+
+                            <tr>
+                                <th>Address</th>
+                                <td>{{currentCustProperty.Address}}</td>
+                            </tr>
+                            <tr>
+                                <th>City</th>
+                                <td>{{currentCustProperty.City}}</td>
+                            </tr>
+                            <tr>
+                                <th>Taluka</th>
+                                <td>{{currentCustProperty.Taluka}}</td>
+                            </tr>
+                            <tr>
+                                <th>District</th>
+                                <td>{{currentCustProperty.District}}</td>
+                            </tr>
+                            <tr>
+                                <th>State</th>
+                                <td>{{currentCustProperty.State}}</td>
+                            </tr>
+                            <tr>
+                                <th>Pin Code</th>
+                                <td>{{currentCustProperty.Pin_code}}</td>
+                            </tr>
+                            <tr>
+                                <th>Address</th>
+                                <td>{{currentCustProperty.Address}}</td>
+                            </tr>
+                            <tr>
+                                <th>Land Mark</th>
+                                <td>{{currentCustProperty.Land_mark}}</td>
+                            </tr>
+                            <tr>
+                                <th>Property Type</th>
+                                <td>{{currentCustProperty.Property_Type}}</td>
+                            </tr>
+                            <tr>
+                                <th>Land_Area</th>
+                                <td>{{currentCustProperty.Land_Area}}</td>
+                            </tr>
+                            <tr>
+                                <th>Built-Up Area</th>
+                                <td>{{currentCustProperty.Built_up_area}}</td>
+                            </tr>
+                            <tr>
+                                <th>Ownership Type</th>
+                                <td>{{currentCustProperty.Ownership_type}}</td>
+                            </tr>
+                            <tr>
+                                <th>Land Type</th>
+                                <td>{{currentCustProperty.Land_type}}</td>
+                            </tr>
+                            <tr>
+                                <th>Construction Stage</th>
+                                <td>{{currentCustProperty.Construction_stage}}</td>
+                            </tr>
+                            <tr>
+                                <th>Construction Stage Percent</th>
+                                <td>{{currentCustProperty.ConstructionStagePercent}}</td>
+                            </tr>
+                            <tr>
+                                <th>Approx. Value</th>
+                                <td>{{currentCustProperty.Approx_value}}</td>
+                            </tr>
+
+
+
+                        </table>
+                    </div>
+                    <!-- Property end -->
+                    <div class="tab-pane fade" id="loandet" role="tabpanel" aria-labelledby="loandet-tab">
+                        <div class="x_content">
+                            <h4>Loan Details </h4>
+                            <!-- start accordion -->
+                            <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel">
+                                    <a class="panel-heading" role="tab" id="headingOne" data-toggle="collapse"
+                                        data-parent="#accordion" href="#CustExtLoan" aria-expanded="true"
+                                        aria-controls="CustExtLoan">
+                                        <h4 class="panel-title">Existing Loan Details</h4>
+                                    </a>
+                                    <div id="CustExtLoan" class="panel-collapse collapse in" role="tabpanel"
+                                        aria-labelledby="headingOne">
+                                        <div class="panel-body">
+                                            <table class="table table-bordered">
+                                                <tbody>
+                                                    <tr>
+                                                        <th>Name of Institution</th>
+                                                        <td>{{currentCustExtLoan.Name_of_Institution}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Purpose of Loan</th>
+                                                        <td>{{currentCustExtLoan.Purpose_of_Loan}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Disbursed Loan Amount</th>
+                                                        <td>{{currentCustExtLoan.Disbursed_Loan_Amount}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>EMI</th>
+                                                        <td>{{currentCustExtLoan.Emi}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Balance Term</th>
+                                                        <td>{{currentCustExtLoan.Balance_Term}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Name of the Institution</th>
+                                                        <td>{{currentCustExtLoan.Name_of_Institution}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Balance Outstanding</th>
+                                                        <td>{{currentCustExtLoan.Balance_Outstanding}}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel">
+                                    <a class="panel-heading" role="tab" id="headingOne" data-toggle="collapse"
+                                        data-parent="#accordion" href="#CustLoanReq" aria-expanded="true"
+                                        aria-controls="CustLoanReq">
+                                        <h4 class="panel-title">Loan Requirements</h4>
+                                    </a>
+                                    <div id="CustLoanReq" class="panel-collapse collapse in" role="tabpanel"
+                                        aria-labelledby="headingOne">
+                                        <div class="panel-body">
+                                            <table class="table table-bordered">
+                                                <tbody>
+                                                    <tr>
+                                                        <th>Purpose of Loan</th>
+                                                        <td>{{currentCustLoanReq.Purpose_of_Loan}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Loan Amount</th>
+                                                        <td>{{currentCustLoanReq.Loan_Amount}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Loan Tenure</th>
+                                                        <td>{{currentCustLoanReq.Loan_Tenure}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Interest Option</th>
+                                                        <td>{{currentCustLoanReq.Interest_Option}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Payment Method</th>
+                                                        <td>{{currentCustLoanReq.Payment_Method}}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel">
+                                    <a class="panel-heading" role="tab" id="headingOne" data-toggle="collapse"
+                                        data-parent="#accordion" href="#custLoanAmt" aria-expanded="true"
+                                        aria-controls="custLoanAmt">
+                                        <h4 class="panel-title">Loan Requirements</h4>
+                                    </a>
+                                    <div id="custLoanAmt" class="panel-collapse collapse in" role="tabpanel"
+                                        aria-labelledby="headingOne">
+                                        <div class="panel-body">
+                                            <table class="table table-bordered">
+                                                <tbody>
+                                                    <tr>
+                                                        <th>Land Cost</th>
+                                                        <td>{{currentcustLoanAmt.Land_cost}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Agreement Value</th>
+                                                        <td>{{currentcustLoanAmt.Agreement_value}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Amenities Agreement</th>
+                                                        <td>{{currentcustLoanAmt.Amenities_agreement}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Stamp Duty/Regitry Charges</th>
+                                                        <td>{{currentcustLoanAmt.Stamp_Duty_Reg_Charge}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Cost of Construction_Ext_Imp</th>
+                                                        <td>{{currentcustLoanAmt.Cost_of_Construction_Ext_Imp}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th> Incidental</th>
+                                                        <td>{{currentcustLoanAmt.Incidental}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th> Total_Requirement_funds</th>
+                                                        <td>{{currentcustLoanAmt.Total_Requirement_funds}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th> Amount_spent</th>
+                                                        <td>{{currentcustLoanAmt.Amount_spent}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th> Balance_fund</th>
+                                                        <td>{{currentcustLoanAmt.Balance_fund}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th> Savings</th>
+                                                        <td>{{currentcustLoanAmt.Savings}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th> Disposal_of_asset</th>
+                                                        <td>{{currentcustLoanAmt.Disposal_of_asset}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th> Family</th>
+                                                        <td>{{currentcustLoanAmt.Family}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th> Others</th>
+                                                        <td>{{currentcustLoanAmt.Others}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th> Total_balance_fund</th>
+                                                        <td>{{currentcustLoanAmt.Total_balance_fund}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th> Loan_requirement</th>
+                                                        <td>{{currentcustLoanAmt.Loan_requirement}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th> Total_source_of_funds</th>
+                                                        <td>{{currentcustLoanAmt.Total_source_of_funds}}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /page content -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

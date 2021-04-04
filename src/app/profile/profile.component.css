@@ -1,0 +1,20 @@
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-5%, -220%);
+  -ms-transform: translate(-130%, -130%); 
+  text-align: center;
+}
+
+.profile_img:hover .avatar-view {
+  opacity: 0.2;
+}
+
+.profile_img:hover .middle {
+  opacity: 1;
+}
+
+

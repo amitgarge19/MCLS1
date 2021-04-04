@@ -1,0 +1,37 @@
+<div class="login">
+    <div class="login_wrapper">
+        <div class="animate form login_form">
+            <section class="login_content">
+                <form>
+                    <h1>Login</h1>
+                    <div>
+                        <input type="email" name="email" class="form-control" placeholder="Email" [(ngModel)]="email" required="" />
+                    </div>
+                    <div>
+                        <input type="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="password" required="" />
+                    </div>
+                    <div>
+                        <a class="btn btn-secondary text-decoration-none" role="button" aria-pressed="true" (click)="loginFunction()">Log in</a>
+                        <a class="reset_pass" href="#">Lost your password?</a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="separator">
+                        <p class="change_link">New to site?
+                            <a (click)="goToSignUp()" class=" to_register"> Create Account </a>
+                        </p>
+
+                        <div class="clearfix"></div>
+                        <br />
+
+                        <div>
+                            <h1><i class="fa fa-paw"></i> Loans 24</h1>
+                            <p>©2021 All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>

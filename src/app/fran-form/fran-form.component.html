@@ -1,0 +1,289 @@
+<div class="container body">
+  <div class="main_container">   
+
+    <!-- page content -->
+    <div class="right_col" role="main">
+      <div class="">
+        <div class="page-title">
+          <div class="title_left">
+            <h3>{{FranchiseeName}}'s Profile</h3>
+          </div>
+
+          <div class="title_right">
+            <div class="col-md-5 col-sm-5  form-group row pull-right top_search">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                  <button class="btn btn-secondary" type="button">Go!</button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="row">
+
+          <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+              <div class="x_title">
+                <h2>Edit<small>Franchisee</small></h2>
+                <ul class="nav navbar-right panel_toolbox">
+                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i
+                        class="fa fa-wrench"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Settings 1</a>
+                      </li>
+                      <li><a href="#">Settings 2</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="close-link"><i class="fa fa-close"></i></a>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+
+
+                <!-- Smart Wizard -->
+                <div id="wizard" class="form_wizard wizard_horizontal">
+                  <ul class="wizard_steps">
+                    <li>
+                      <a href="#step-1">
+                        <span class="step_no">1</span>
+                        <span class="step_descr">
+                          Step 1<br />
+                          <small>Office Details</small>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#step-2">
+                        <span class="step_no">2</span>
+                        <span class="step_descr">
+                          Step 2<br />
+                          <small>Bank Details</small>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#step-3">
+                        <span class="step_no">3</span>
+                        <span class="step_descr">
+                          Step 3<br />
+                          <small>Step 3</small>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <div id="step-1">
+                    <h2 class="StepTitle">Step 1 Franchisee Office</h2>
+                    <form class="form-horizontal form-label-left">
+
+                      <div class="form-group row">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="OfficeName">Office Name
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" id="OfficeName" name="OfficeName" required="required" class="form-control"
+                            [(ngModel)]="OfficeName">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="OffNumber" class="col-form-label col-md-3 col-sm-3 label-align">Mobile / Telephone
+                          no.</label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input id="OffNumber" class="form-control col has-feedback-left" type="text" name="OffNumber"
+                            data-inputmask="'mask' : '(999) 999-9999'" [(ngModel)]="OffNumber">
+                          <span class="fa fa-mobile form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Shop / Office</label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <div id="OffType" class="form-control">
+                            <label class="radio-inline">
+                              <input type="radio" value="Rented" name="OffType" [(ngModel)]="OffType">
+                              &nbsp; Rented &nbsp;
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="OffType" value="Owned" [(ngModel)]="OffType">
+                              &nbsp; Owned &nbsp;
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="middle-name" class="col-form-label col-md-3 col-sm-3 label-align">Address <span
+                            class="required">*</span> </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <textarea id="OffAddress" class="from-control col" type="text" name="OffAddress" rows="5"
+                            [(ngModel)]="OffAddress"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="OffCity" class="col-form-label col-md-3 col-sm-3 label-align">City</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="OffCity" class="form-control col" type="text" name="OffCity" [(ngModel)]="OffCity">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="OffTaluka" class="col-form-label col-md-3 col-sm-3 label-align">Taluka</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="OffTaluka" class="form-control col" type="text" name="OffTaluka"
+                            [(ngModel)]="OffTaluka">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="OffDistrict" class="col-form-label col-md-3 col-sm-3 label-align">District</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="OffDistrict" class="form-control col" type="text" name="OffDistrict"
+                            [(ngModel)]="OffDistrict">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="OffPinCode" class="col-form-label col-md-3 col-sm-3 label-align">PinCode</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="OffPinCode" class="form-control col" type="text" name="OffPinCode"
+                            [(ngModel)]="OffPinCode">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="OffState" class="col-form-label col-md-3 col-sm-3 label-align">State</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="OffState" class="form-control col" type="text" name="OffState"
+                            [(ngModel)]="OffState">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+                  <div id="step-2">
+                    <h2 class="StepTitle">Step 2 Bank Details</h2>
+                    <form class="form-horizontal form-label-left">
+
+                      <div class="form-group row">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="bankName"> Bank Name
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" id="bankName" name="bankName" required="required" class="form-control"
+                            [(ngModel)]="bankName">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="Bank Acount No" class="col-form-label col-md-3 col-sm-3 label-align">Account
+                          No.</label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input id="AccountNumber" class="form-control col" type="text" name="AccountNumber"
+                            [(ngModel)]="AccountNumber">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Account Type</label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <div id="AccountType" class="form-control">
+                            <label class="radio-inline">
+                              <input type="radio" value="Savings" name="AccountType" [(ngModel)]="AccountType">
+                              &nbsp; Savings &nbsp;
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="AccountType" value="Current" [(ngModel)]="AccountType">
+                              &nbsp; Current &nbsp;
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">IFSC<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" id="IFSC" class="date-picker form-control" name="IFSC" [(ngModel)]="IFSC"
+                            required="required">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="Branch_Address" class="col-form-label col-md-3 col-sm-3 label-align">Address
+                          <span class="required">*</span> </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <textarea id="Branch_Address" class="from-control col" type="text" name="Branch_Address"
+                            rows="5" [(ngModel)]="Branch_Address"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="BankCity" class="col-form-label col-md-3 col-sm-3 label-align">City</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="BankCity" class="form-control col" type="text" name="BankCity"
+                            [(ngModel)]="BankCity">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="BankTaluka" class="col-form-label col-md-3 col-sm-3 label-align">Taluka</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="BankTaluka" class="form-control col" type="text" name="BankTaluka"
+                            [(ngModel)]="BankTaluka">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="BankDistrict" class="col-form-label col-md-3 col-sm-3 label-align">District</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="BankDistrict" class="form-control col" type="text" name="BankDistrict"
+                            [(ngModel)]="BankDistrict">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="BankPinCode" class="col-form-label col-md-3 col-sm-3 label-align">Pin-Code</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="BankPinCode" class="form-control col" type="text" name="BankPinCode"
+                            [(ngModel)]="BankPinCode">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="BankState" class="col-form-label col-md-3 col-sm-3 label-align">State</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="BankState" class="form-control col" type="text" name="BankState"
+                            [(ngModel)]="BankState">
+                        </div>
+                      </div>
+                    </form>
+
+                  </div>
+                  <div id="step-3">
+                    <h2 class="StepTitle">Step 3 Scan and Pay</h2>
+                    <div class="text-center">
+                      <img src="../../assets/images/Phonpe Image.jpeg" class="rounded" alt="Phonpe">
+                    </div>
+                  </div>
+
+                </div>
+                <a (click)="addFranchiseeOfficeDetails()" class="buttonFinish buttonDisabled btn btn-default">Finish</a>
+                <!-- End SmartWizard Content -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /page content -->  
+  </div>
+</div>

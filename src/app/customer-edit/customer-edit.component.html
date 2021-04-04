@@ -1,0 +1,1816 @@
+<div class="container body">
+    <div class="main_container">
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="">
+                <div class="page-title">
+                    <div class="title_left">
+                        <h3>Customer Details</h3>
+                    </div>
+
+                    <div class="title_right">
+                        <div class="col-md-5 col-sm-5  form-group row pull-right top_search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search for...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-secondary" type="button">Go!</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+
+                <div class="row">
+
+                    <div class="col-md-12 col-sm-12 ">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>Add<small>the lead</small></h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                            aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Settings 1</a>
+                                            </li>
+                                            <li><a href="#">Settings 2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <!-- Smart Wizard -->
+                                <div id="wizard" class="form_wizard wizard_horizontal">
+                                    <ul class="wizard_steps">
+                                        <li>
+                                            <a href="#step-1">
+                                                <span class="step_no">1</span>
+                                                <span class="step_descr">
+                                                    Step 1<br />
+                                                    <small>Basic Details</small>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#step-2">
+                                                <span class="step_no">2</span>
+                                                <span class="step_descr">
+                                                    Step 2<br />
+                                                    <small>Occupational Details</small>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#step-3">
+                                                <span class="step_no">3</span>
+                                                <span class="step_descr">
+                                                    Step 3<br />
+                                                    <small>Financial Details</small>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#step-4">
+                                                <span class="step_no">4</span>
+                                                <span class="step_descr">
+                                                    Step 4<br />
+                                                    <small>Bank Details</small>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#step-5">
+                                                <span class="step_no">5</span>
+                                                <span class="step_descr">
+                                                    Step 5<br />
+                                                    <small>Property Details</small>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#step-6">
+                                                <span class="step_no">6</span>
+                                                <span class="step_descr">
+                                                    Step 6<br />
+                                                    <small>Loan Details</small>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                    <div id="step-1">
+                                        <h2 class="StepTitle">Step 1 Customer Basic Details</h2>
+                                        <form class="form-horizontal form-label-left">
+                                            <div class="form-group row">
+                                                <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                    for="firstName">First Name <span class="required">*</span>
+                                                </label>
+                                                <div class="col-md-6 col-sm-6 ">
+                                                    <input type="text" id="firstName" required="required"
+                                                        class="form-control has-feedback-left" name="firstName"
+                                                        [(ngModel)]="currentCustomer.firstName">
+                                                    <span class="fa fa-user form-control-feedback left"
+                                                        aria-hidden="true"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                    for="middleName">Middle Name <span class="required">*</span>
+                                                </label>
+                                                <div class="col-md-6 col-sm-6 ">
+                                                    <input type="text" id="middleName" required="required"
+                                                        class="form-control has-feedback-left" name="middleName"
+                                                        [(ngModel)]="currentCustomer.middleName">
+                                                    <span class="fa fa-user form-control-feedback left"
+                                                        aria-hidden="true"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                    for="lastName">Last
+                                                    name <span class="required">*</span>
+                                                </label>
+                                                <div class="col-md-6 col-sm-6 ">
+                                                    <input type="text" id="lastName" required="required"
+                                                        class="form-control has-feedback-left" name="lastName"
+                                                        [(ngModel)]="currentCustomer.lastName">
+                                                    <span class="fa fa-user form-control-feedback left"
+                                                        aria-hidden="true"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                    for="motherName">Mother's Name <span class="required">*</span>
+                                                </label>
+                                                <div class="col-md-6 col-sm-6 ">
+                                                    <input type="text" id="motherName" required="required"
+                                                        class="form-control has-feedback-left" name="motherName"
+                                                        [(ngModel)]="currentCustomer.Mother_name">
+                                                    <span class="fa fa-user form-control-feedback left"
+                                                        aria-hidden="true"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                    for="fatherName">Father's Name <span class="required">*</span>
+                                                </label>
+                                                <div class="col-md-6 col-sm-6 ">
+                                                    <input type="text" id="fatherName" required="required"
+                                                        class="form-control has-feedback-left" name="fatherName"
+                                                        [(ngModel)]="currentCustomer.Father_name">
+                                                    <span class="fa fa-user form-control-feedback left"
+                                                        aria-hidden="true"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                    for="Spouse_name">Spouse's Name</label>
+                                                <div class="col-md-6 col-sm-6 ">
+                                                    <input type="text" id="spouseName"
+                                                        class="form-control has-feedback-left" name="Spouse_name"
+                                                        [(ngModel)]="currentCustomer.Spouse_name">
+                                                    <span class="fa fa-pause form-control-feedback left"
+                                                        aria-hidden="true"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="dateOfBirth"
+                                                    class="col-form-label col-md-3 col-sm-3  label-align">Date of
+                                                    Birth<span class="required">*</span></label>
+                                                <div class="col-md-3 col-sm-2">
+                                                    <input class="form-control" class="date" type="date"
+                                                        name="dateOfBirth" datetime="yyyy-MM-dd HH:mm:ss"
+                                                        [ngModel]="currentCustomer.Date_of_birth | date:'yyyy-MM-dd'"
+                                                        (ngModelChange)="currentCustomer.Date_of_birth = $event"
+                                                        required>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label class="control-label col-md-3 col-sm-3 label-align">Select
+                                                    Category</label>
+                                                <div class="col-md-2 col-sm-2 ">
+                                                    <select class="select2_single form-control" name="category"
+                                                        tabindex="1" [(ngModel)]="currentCustomer.Category">
+                                                        <option selected="selected">Other</option>
+                                                        <option value="AK">Alaska</option>
+                                                        <option value="HI">Hawaii</option>
+                                                        <option value="CA">California</option>
+                                                        <option value="NV">Nevada</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label class="col-form-label col-md-3 col-sm-3 label-align">Gender<span
+                                                        class="required">*</span></label>
+                                                <div class="col-md-6 col-sm-6">
+                                                    <div id="gender" class="form-control">
+                                                        <label class="radio-inline">
+                                                            <input type="radio" value="Male" name="Gender"
+                                                                [(ngModel)]="currentCustomer.Gender" required>
+                                                            &nbsp; Male &nbsp;
+                                                        </label>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="Gender" value="Female"
+                                                                [(ngModel)]="currentCustomer.Gender">
+                                                            &nbsp; Female &nbsp;
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label class="control-label col-md-3 col-sm-3 label-align">
+                                                    Qualification<span class="required">*</span></label>
+                                                <div class="col-md-2 col-sm-2 ">
+                                                    <select class="select2_single form-control" tabindex="1"
+                                                        name="Qualification" [(ngModel)]="currentCustomer.Qualification"
+                                                        required>
+                                                        <option selected="selected">Other</option>
+                                                        <option value="Post Graduate">Post Graduate</option>
+                                                        <option value="Graduate">Graduate</option>
+                                                        <option value="12th">12th</option>
+                                                        <option value="10th">10th</option>
+                                                        <option value="8th">8th</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="PAN"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">PAN<span
+                                                        class="required">*</span>
+                                                </label>
+                                                <div class="col-md-6 col-sm-6 ">
+                                                    <input id="PAN" class="form-control col" type="text" name="PAN"
+                                                        [(ngModel)]="currentCustomer.PAN" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Aadhar Number"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Aadhar
+                                                    Number<span class="required">*</span></label>
+                                                <div class="col-md-6 col-sm-6 ">
+                                                    <input id="Aadhar Number" class="form-control col" type="text"
+                                                        name="Aadhar" [(ngModel)]="currentCustomer.Aadhar" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Mobile Number"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Mobile
+                                                    Number<span class="required">*</span></label>
+                                                <div class="col-md-6 col-sm-6 ">
+                                                    <input id="Mobile Number" class="form-control col has-feedback-left"
+                                                        type="text" name="Mobile"
+                                                        data-inputmask="'mask' : '(999) 999-9999'"
+                                                        [(ngModel)]="currentCustomer.Mobile" required>
+                                                    <span class="fa fa-mobile form-control-feedback left"
+                                                        aria-hidden="true"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Email"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Email<span
+                                                        class="required">*</span></label>
+                                                <div class="col-md-6 col-sm-6 ">
+                                                    <input id="Email" class="form-control col has-feedback-left"
+                                                        type="text" name="Email" [(ngModel)]="currentCustomer.Email"
+                                                        required>
+                                                    <span class="fa fa-envelope form-control-feedback left"
+                                                        aria-hidden="true"></span>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group row">
+                                                <label for="Passport"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Passport</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Passport" class="form-control col" type="text"
+                                                        name="Passport" [(ngModel)]="currentCustomer.Passport">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Voter_ID"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Voter
+                                                    ID
+                                                    No.</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Voter_ID" class="form-control col" type="text"
+                                                        name="Voter_ID" [(ngModel)]="currentCustomer.Voter_ID">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Current_Address"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Current Address
+                                                    <span class="required">*</span></label>
+                                                <div class="col-md-6 col-sm-6 ">
+                                                    <textarea id="Current_Address" class="from-control col" type="text"
+                                                        name="Current_Address" rows="5"
+                                                        [(ngModel)]="currentCustomer.Current_Address"
+                                                        required></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="C_City"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">City<span
+                                                        class="required">*</span></label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="C_City" class="form-control col" type="text"
+                                                        name="C_City" [(ngModel)]="currentCustomer.C_City" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="C_Taluka"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Taluka<span
+                                                        class="required">*</span></label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="C_Taluka" class="form-control col" type="text"
+                                                        name="C_Taluka" [(ngModel)]="currentCustomer.C_Taluka" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="C_District"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">District<span
+                                                        class="required">*</span></label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="C_District" class="form-control col" type="text"
+                                                        name="C_District" [(ngModel)]="currentCustomer.C_District"
+                                                        required>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="C_PinCode"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Pin
+                                                    Code<span class="required">*</span></label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="C_PinCode" class="form-control col" type="text"
+                                                        name="C_PinCode" [(ngModel)]="currentCustomer.C_PinCode"
+                                                        required>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="C_State"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">State<span
+                                                        class="required">*</span></label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="C_State" class="form-control col" type="text"
+                                                        name="C_State" [(ngModel)]="currentCustomer.C_State" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" name="C_Add_SameAs_P_Add" ngModel
+                                                            (ngModelChange)="onNgModelChange($event)"> &nbsp;
+                                                        &nbsp; Permanent
+                                                        Address
+                                                        same as Current Address
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Permanent_Address"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Permanent
+                                                    Address
+                                                    <span class="required">*</span> </label>
+                                                <div class="col-md-6 col-sm-6 ">
+                                                    <textarea id="Permanent_Address" class="from-control col"
+                                                        type="text" name="Permanent_Address" rows="5"
+                                                        [(ngModel)]="currentCustomer.Permanent_Address"
+                                                        required></textarea>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group row">
+                                                <label for="P_City"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">City<span
+                                                        class="required">*</span></label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="P_City" class="form-control col" type="text"
+                                                        name="P_City" [(ngModel)]="currentCustomer.P_City" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="P_Taluka"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Taluka<span
+                                                        class="required">*</span></label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="P_Taluka" class="form-control col" type="text"
+                                                        name="P_Taluka" [(ngModel)]="currentCustomer.P_Taluka" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="District"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">District<span
+                                                        class="required">*</span></label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="District" class="form-control col" type="text"
+                                                        name="District" [(ngModel)]="currentCustomer.P_District"
+                                                        required>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="P_PinCode"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Pin
+                                                    Code<span class="required">*</span></label>
+                                                <div class="col-md-3 col-sm-3">
+                                                    <input id="P_PinCode" class="form-control col" type="text"
+                                                        name="P_PinCode" [(ngModel)]="currentCustomer.P_PinCode"
+                                                        required>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="P_State"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">State
+                                                    <span class="required">*</span></label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="P_State" class="form-control col" type="text"
+                                                        name="P_State" [(ngModel)]="currentCustomer.P_State" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Period_of_stay"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Period of
+                                                    Stay at current address (in years)<span
+                                                        class="required">*</span></label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Period_of_stay" class="form-control col" type="text"
+                                                        name="Period_of_stay"
+                                                        [(ngModel)]="currentCustomer.Period_of_stay" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="DL_No"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Driving
+                                                    Licence
+                                                    Number</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="DL_No" class="form-control col" type="text" name="DL_No"
+                                                        [(ngModel)]="currentCustomer.DL_No">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="C_KYC_No"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">CKYC
+                                                    Number</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="C_KYC_No" class="form-control col" type="text"
+                                                        name="C_KYC_No" [(ngModel)]="currentCustomer.C_KYC_No">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div id="step-2">
+                                        <h2 class="StepTitle">Step 2 Customer Occupational Details</h2>
+                                        <form class="form-horizontal form-label-left">
+                                            <div class="form-group row">
+                                                <label class="control-label col-md-3 col-sm-3 label-align">
+                                                    Occupatinal Category</label>
+                                                <div class="col-md-2 col-sm-2 ">
+                                                    <select class="select2_single form-control" name="category"
+                                                        tabindex="1" [(ngModel)]="custOccupation.Occupational_Category">
+                                                        <option selected="selected" value="Other">Other</option>
+                                                        <option value="Farmer">Farmer</option>
+                                                        <option value="Job/Service">Job/Service</option>
+                                                        <option value="Business">Business</option>
+                                                        <option value="Doctor">Doctor</option>
+                                                        <option value="Professional">Professional</option>
+                                                        <option value="Worker">Worker</option>
+                                                        <option value="Driver">Driver</option>
+                                                        <option value="Sportsman">Sportsman</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                    for="Employer or Business Name">Employer or Business Name
+                                                </label>
+                                                <div class="col-md-6 col-sm-6 ">
+                                                    <input type="text" id="Employer_Business_Name"
+                                                        name="Employer_Business_Name" required="required"
+                                                        class="form-control"
+                                                        [(ngModel)]="custOccupation.Employer_Business_Name">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Employer_Business_Type"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Employer
+                                                    Business Type</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Employer_Business_Type" class="form-control col"
+                                                        type="text" name="Employer_Business_Type"
+                                                        [(ngModel)]="custOccupation.Employer_Business_Type">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Legal_Status"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Legal
+                                                    Status</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Legal_Status" class="form-control col" type="text"
+                                                        name="Legal_Status" [(ngModel)]="custOccupation.Legal_Status">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Designation"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Designation
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Designation" class="form-control col" type="text"
+                                                        name="Designation" [(ngModel)]="custOccupation.Designation">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Department"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Department</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Department" class="form-control col" type="text"
+                                                        name="Department" [(ngModel)]="custOccupation.Department">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Employee_Code"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Employee
+                                                    code</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Employee_Code" class="form-control col" type="text"
+                                                        name="Employee_Code" [(ngModel)]="custOccupation.Employee_Code">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Date_of_Joining_Commencement"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align"> Date of
+                                                    Joining or Commencement
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input class="form-control" class="date" type="date"
+                                                        name="Date_of_Joining_Commencement"
+                                                        datetime="yyyy-MM-dd HH:mm:ss"
+                                                        [ngModel]="custOccupation.Date_of_Joining_Commencement | date:'yyyy-MM-dd'"
+                                                        (ngModelChange)="custOccupation.Date_of_Joining_Commencement = $event"
+                                                        required>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Total_work_experience"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Total work
+                                                    Experience</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Total_work_experience" class="form-control col"
+                                                        type="text" name="Total_work_experience"
+                                                        [(ngModel)]="custOccupation.Total_work_experience">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="GSTIN"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">GST
+                                                    IN</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="GST IN" class="form-control col" type="text" name="GSTIN"
+                                                        [(ngModel)]="custOccupation.GSTIN">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Off_Address"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Address <span
+                                                        class="required">*</span> </label>
+                                                <div class="col-md-6 col-sm-6 ">
+                                                    <textarea id="Off_Address" class="form-control col" type="text"
+                                                        name="Off_Address" rows="5" cols="3"
+                                                        [(ngModel)]="custOccupation.Address"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Off_City"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">City</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Off_City" class="form-control col" type="text"
+                                                        name="Off_City" [(ngModel)]="custOccupation.City">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Off_Taluka"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Taluka</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Off_Taluka" class="form-control col" type="text"
+                                                        name="Off_Taluka" [(ngModel)]="custOccupation.Taluka">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Off_District"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">District</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Off_District" class="form-control col" type="text"
+                                                        name="Off_District" [(ngModel)]="custOccupation.District">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Off_PinCode"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">PinCode</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Off_PinCode" class="form-control col" type="text"
+                                                        name="Off_PinCode" [(ngModel)]="custOccupation.PinCode">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Off_State"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">State</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Off_State" class="form-control col" type="text"
+                                                        name="State" [(ngModel)]="custOccupation.State">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Off_Mobile / Telephone no"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Mobile/Telephone
+                                                    no.</label>
+                                                <div class="col-md-6 col-sm-6 ">
+                                                    <input id="Off_Mobile / Telephone no" class="form-control col"
+                                                        type="text" name="Off_Phone_No"
+                                                        [(ngModel)]="custOccupation.Phone_No">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div id="step-3">
+                                        <h2 class="StepTitle">Step 3 Customer Financial Details</h2>
+                                        <form class="form-horizontal form-label-left">
+
+                                            <div class="form-group row">
+                                                <label for="Gross Monthly Income"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Gross Monthly
+                                                    Income
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Gross Monthly Income" class="form-control col"
+                                                        type="text" name="Gross_monthly_income"
+                                                        [(ngModel)]="custFinance.Gross_monthly_income">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Average Monthly Expenses"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Average Monthly
+                                                    Expenses
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Average Monthly Expenses" class="form-control col"
+                                                        type="text" name="Average_monthly_expenses"
+                                                        [(ngModel)]="custFinance.Average_monthly_expenses">
+                                                </div>
+                                            </div>
+
+                                            <!-- Assets -->
+                                            <div class="form-group row">
+                                                <label for="Assets SB Acount"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Assets SB
+                                                    Acount
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Assets SB Acount" class="form-control col" type="text"
+                                                        name="Assets_SB_Account"
+                                                        [(ngModel)]="custFinance.Assets_SB_Account"
+                                                        (input)="findSumofAssets()">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Immovable_Property"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Immovable
+                                                    Property
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Immovable_Property" class="form-control col" type="text"
+                                                        name="Immovable_Property"
+                                                        [(ngModel)]="custFinance.Immovable_Property"
+                                                        (input)="findSumofAssets()">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Current_balance_PF"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Current Balance
+                                                    PF
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Current_balance_PF" class="form-control col" type="text"
+                                                        name="Current_balance_PF"
+                                                        [(ngModel)]="custFinance.Current_balance_PF"
+                                                        (input)="findSumofAssets()">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Shares_Securities"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Shares
+                                                    Securities
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Shares_Securities" class="form-control col" type="text"
+                                                        name="Shares_Securities"
+                                                        [(ngModel)]="custFinance.Shares_Securities"
+                                                        (input)="findSumofAssets()">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Fixed_Deposits"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Fixed Deposits
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Fixed_Deposits" class="form-control col" type="text"
+                                                        name="Fixed_Deposits" [(ngModel)]="custFinance.Fixed_Deposits"
+                                                        (input)="findSumofAssets()">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Others_Assets"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Other Assets
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Others_Assets" class="form-control col" type="text"
+                                                        name="Others_Assets" [(ngModel)]="custFinance.Others_Assets"
+                                                        (input)="findSumofAssets()">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Total_Assets"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Total Assets
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Total_Assets" class="form-control col" type="text"
+                                                        name="Total_Assets" [(ngModel)]="custFinance.Total_Assets"
+                                                        disabled>
+                                                </div>
+                                            </div>
+
+                                            <!-- Liabilities-->
+                                            <div class="form-group row">
+                                                <label for="Net_Monthly_Income"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Net Monthly
+                                                    Income
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Net_Monthly_Income" class="form-control col" type="text"
+                                                        name="Net_Monthly_Income"
+                                                        [(ngModel)]="custFinance.Net_Monthly_Income">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group row">
+                                                <label for="Credit_Society_Loan"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Credit Society
+                                                    Loan
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Credit_Society_Loan" class="form-control col" type="text"
+                                                        name="Credit_Society_Loan"
+                                                        [(ngModel)]="custFinance.Credit_Society_Loan"
+                                                        (input)="findSumofLiabilities()">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Employer_Loan"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Employer Loan
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Employer_Loan" class="form-control col" type="text"
+                                                        name="Employer_Loan" [(ngModel)]="custFinance.Employer_Loan"
+                                                        (input)="findSumofLiabilities()">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Home_Loan"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Home Loan
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Home_Loan" class="form-control col" type="text"
+                                                        name="Home_Loan" [(ngModel)]="custFinance.Home_Loan"
+                                                        (input)="findSumofLiabilities()">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="PF_Loan"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">PF
+                                                    Loan
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="PF_Loan" class="form-control col" type="text"
+                                                        name="PF_Loan" [(ngModel)]="custFinance.PF_Loan"
+                                                        (input)="findSumofLiabilities()">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Vehicle_Loan"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Vechical Loan
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Vehicle_Loan" class="form-control col" type="text"
+                                                        name="Vehicle_Loan" [(ngModel)]="custFinance.Vehicle_Loan"
+                                                        (input)="findSumofLiabilities()">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Personal_Loan"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Personal Loan
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Personal_Loan" class="form-control col" type="text"
+                                                        name="Personal_Loan" [(ngModel)]="custFinance.Personal_Loan"
+                                                        (input)="findSumofLiabilities()">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Other_Liabilities"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Other
+                                                    Liablities
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Other_Liabilities" class="form-control col" type="text"
+                                                        name="Other_Liabilities"
+                                                        [(ngModel)]="custFinance.Other_Liabilities"
+                                                        (input)="findSumofLiabilities()">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Total_Liabilities"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Total
+                                                    Liablities
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Total_Liabilities" class="form-control col" type="text"
+                                                        name="Total_Liabilities"
+                                                        [(ngModel)]="custFinance.Total_Liabilities" disabled>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div id="step-4">
+                                        <h2 class="StepTitle">Step 4 Customer Bank Details</h2>
+                                        <form class="form-horizontal form-label-left">
+
+                                            <div class="form-group row">
+                                                <label class="col-form-label col-md-3 col-sm-3 label-align">IFSC
+                                                    <span class="required">*</span>
+                                                </label>
+                                                <div class="col-md-6 col-sm-6 ">
+                                                    <input id="IFSC" class="form-control col" required="required"
+                                                        type="text" name="IFSC" [(ngModel)]="custBank.IFSC"
+                                                        (focusout)="getBankDetails()">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                    for="Bank_Name">Name of the Bank
+                                                </label>
+                                                <div class="col-md-6 col-sm-6 ">
+                                                    <input type="text" id="Bank_Name" name="Bank_Name"
+                                                        required="required" class="form-control"
+                                                        [(ngModel)]="custBank.Bank_Name" disabled>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label class="col-form-label col-md-3 col-sm-3 label-align">Branch
+                                                    <span class="required">*</span>
+                                                </label>
+                                                <div class="col-md-6 col-sm-6 ">
+                                                    <input id="Branch" class="form-control col" required="required"
+                                                        type="text" name="Branch" [(ngModel)]="custBank.Branch"
+                                                        disabled>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Account_No"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Bank Acount
+                                                    No.</label>
+                                                <div class="col-md-6 col-sm-6 ">
+                                                    <input id="Account_No" class="form-control col" type="text"
+                                                        name="Account_No" [(ngModel)]="custBank.Account_No">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Account</label>
+                                                <div class="col-md-6 col-sm-6">
+                                                    <div id="ACC_Type" class="form-control">
+                                                        <label class="radio-inline">
+                                                            <input type="radio" value="Saving" name="ACC_Type"
+                                                                [(ngModel)]="custBank.ACC_Type">
+                                                            &nbsp; Savings &nbsp;
+                                                        </label>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="ACC_Type" value="Current"
+                                                                [(ngModel)]="custBank.ACC_Type">
+                                                            &nbsp; Current &nbsp;
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Account Opening_Date"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Account Opening
+                                                    Date</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input class="form-control" class="date" type="date"
+                                                        name="Opening_Date" datetime="yyyy-MM-dd HH:mm:ss"
+                                                        [ngModel]="custBank.Opening_Date | date:'yyyy-MM-dd'"
+                                                        (ngModelChange)="custBank.Opening_Date = $event" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Balance"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Balance</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Balance" class="form-control col" type="text"
+                                                        name="Balance" [(ngModel)]="custBank.Balance">
+                                                </div>
+                                            </div>
+
+                                            <button type="button" class="btn btn-primary">custmor Cradit Card
+                                                Details</button>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input #CreditCard ngModel type="checkbox"> &nbsp;
+                                                    &nbsp; Do this customer has a Credit Card?
+                                                </label>
+                                            </div>
+
+                                            <div>
+                                                <div class="form-group row">
+                                                    <label for="Credit_Card_no"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Credit Card
+                                                        No.
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Credit_Card_no" class="form-control col" type="text"
+                                                            name="Credit_Card_no"
+                                                            [(ngModel)]="custCrediCard.Credit_Card_no"
+                                                            [disabled]="!CreditCard.checked">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Since"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Using since
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Since" class="form-control col" type="text"
+                                                            name="Since" [(ngModel)]="custCrediCard.Since"
+                                                            [disabled]="!CreditCard.checked">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="CreditCard_Bank_name"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Bank Name
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="CreditCard_Bank_name" class="form-control col"
+                                                            type="text" name="CreditCard_Bank_name"
+                                                            [(ngModel)]="custCrediCard.CreditCard_Bank_name"
+                                                            [disabled]="!CreditCard.checked">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Credit_Limit"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Credit
+                                                        Limit
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Credit_Limit" class="form-control col" type="text"
+                                                            name="Credit_Limit" [(ngModel)]="custCrediCard.Credit_Limit"
+                                                            [disabled]="!CreditCard.checked">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="CreditCard_Outstanding_Amount"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Outstanding
+                                                        Amount
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="CreditCard_Outstanding_Amount"
+                                                            class="form-control col" type="text"
+                                                            name="CreditCard_Outstanding_Amount" value="0"
+                                                            [(ngModel)]="custCrediCard.CreditCard_Outstanding_Amount"
+                                                            [disabled]="!CreditCard.checked">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="CreditCard_Balance_Term"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Balance
+                                                        Term
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="CreditCard_Balance_Term" class="form-control col"
+                                                            type="text" name="CreditCard_Balance_Term" value="0"
+                                                            [(ngModel)]="custCrediCard.CreditCard_Balance_Term"
+                                                            [disabled]="!CreditCard.checked">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="CreditCard_Balance_Outstanding"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Balance
+                                                        Outstanding
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="CreditCard_Balance_Outstanding"
+                                                            class="form-control col" type="text"
+                                                            name="CreditCard_Balance_Outstanding" value="0"
+                                                            [(ngModel)]="custCrediCard.CreditCard_Balance_Outstanding"
+                                                            [disabled]="!CreditCard.checked">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <button type="button" class="btn btn-primary">Customer Insurance Details
+
+                                            </button>
+                                            <div>
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input #Insurance ngModel type="checkbox"> &nbsp;
+                                                        &nbsp; Do this customer has Insurance Policy?
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Policy No."
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Policy No.
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Policy_no" class="form-control col" type="text"
+                                                            name="Policy_no" [(ngModel)]="custInsurance.Policy_no"
+                                                            [disabled]="!Insurance.checked">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Policy_name"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Policy Name
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Policy_name" class="form-control col" type="text"
+                                                            name="Policy_name" [(ngModel)]="custInsurance.Policy_name"
+                                                            [disabled]="!Insurance.checked">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Issued_By"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Issued By
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Issued_By" class="form-control col" type="text"
+                                                            name="Issued_By" [(ngModel)]="custInsurance.Issued_By"
+                                                            [disabled]="!Insurance.checked">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Maturity_date"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Maturity
+                                                        Date
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input class="form-control" class="date" type="date"
+                                                            name="Maturity_date" datetime="yyyy-MM-dd HH:mm:ss"
+                                                            [ngModel]="custInsurance.Maturity_date | date:'yyyy-MM-dd'"
+                                                            (ngModelChange)="custInsurance.Maturity_date = $event"
+                                                            required [disabled]="!Insurance.checked">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Policy_value"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Policy
+                                                        value
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Policy_value" class="form-control col" type="text"
+                                                            name="Policy_value" [(ngModel)]="custInsurance.Policy_value"
+                                                            [disabled]="!Insurance.checked">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Policy_Type"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Policy Type
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Policy_Type" class="form-control col" type="text"
+                                                            name="Policy_Type" [(ngModel)]="custInsurance.Policy_Type"
+                                                            [disabled]="!Insurance.checked">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Premium"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Policy
+                                                        Premium
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Premium" class="form-control col" type="text"
+                                                            name="Premium" [(ngModel)]="custInsurance.Premium"
+                                                            [disabled]="!Insurance.checked">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div id="step-5">
+                                        <h2 class="StepTitle">Step 5 Customer Property Details </h2>
+                                        <form class="form-horizontal form-label-left">
+                                            <div class="form-group row">
+                                                <label for="Property_Address"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Property
+                                                    Address</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Property_Address" class="form-control col" type="text"
+                                                        name="Property_Address" [(ngModel)]="custProperty.Address">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Land_mark"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Land
+                                                    Mark</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Land_mark" class="form-control col" type="text"
+                                                        name="Property_Land_mark" [(ngModel)]="custProperty.Land_mark">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Property_City"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">City</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Property_City" class="form-control col" type="text"
+                                                        name="Property_City" [(ngModel)]="custProperty.City">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Property_Taluka"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Taluka</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Property_Taluka" class="form-control col" type="text"
+                                                        name="Property_Taluka" [(ngModel)]="custProperty.Taluka">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Property_District"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">District</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Property_District" class="form-control col" type="text"
+                                                        name="Property_District" [(ngModel)]="custProperty.District">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Property_Pin_code"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Pin
+                                                    Code</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Property_Pin_code" class="form-control col" type="text"
+                                                        name="Property_Pin_code" [(ngModel)]="custProperty.Pin_code">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Property_State"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">State</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Property_State" class="form-control col" type="text"
+                                                        name="Property_State" [(ngModel)]="custProperty.State">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Property_Type"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Property
+                                                    Type</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <select class="select2_single form-control" tabindex="1"
+                                                        name="Property_Type" [(ngModel)]="custProperty.Property_Type">
+                                                        <option value="Other" selected="selected">Other</option>
+                                                        <option value="Tangible Property">Tangible Property</option>
+                                                        <option value="Intangible Property">Intangible Property</option>
+                                                        <option value="Private Property">Private Property</option>
+                                                        <option value="Public Property">Public Property</option>
+                                                        <option value="Personal Property">Personal Property
+                                                        </option>
+                                                        <option value="Real Property">Real Property</option>
+                                                        <option value="Corporeal Property">Corporeal Property
+                                                        </option>
+                                                        <option value="Incorporeal Property">Incorporeal Property
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Land_Area"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Land
+                                                    Area</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Land_Area" class="form-control col" type="text"
+                                                        name="Land_Area" [(ngModel)]="custProperty.Land_Area">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Built_up_area"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Built Up Area
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Built_up_area" class="form-control col" type="text"
+                                                        name="Built_up_area" [(ngModel)]="custProperty.Built_up_area">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Ownership_type"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Ownership
+                                                    Type</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <select class="select2_single form-control" tabindex="1"
+                                                        name="Ownership_type" [(ngModel)]="custProperty.Ownership_type">
+                                                        <option value="Individual/Sole_Ownership" selected="selected">
+                                                            Individual/Sole Ownership</option>
+                                                        <option value="Joint-Ownership/Co-ownership">
+                                                            Joint-Ownership/Co-ownership</option>
+                                                        <option value="Property Ownership by Nomination">Property
+                                                            Ownership by Nomination</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Land_type"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Land
+                                                    Type</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <select class="select2_single form-control" tabindex="1"
+                                                        name="Land_type" [(ngModel)]="custProperty.Land_type">
+                                                        <option value="Agriculture Land" selected="selected">Agriculture
+                                                            Land</option>
+                                                        <option value="Barren Land">Barren Land</option>
+                                                        <option value="Real Estate Land">Real Estate Land</option>
+                                                        <option value="Commercial Land">Commercial Land
+                                                        </option>
+                                                        <option value="Farm Land">Farm Land</option>
+                                                        <option value="Residential Land">Residential Land
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Construction_stage"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Construction
+                                                    Stage</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Construction_stage" class="form-control col" type="text"
+                                                        name="Construction_stage"
+                                                        [(ngModel)]="custProperty.Construction_stage">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="ConstructionStagePercent"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Construction
+                                                    Stage
+                                                    Percent</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="ConstructionStagePercent" class="form-control col"
+                                                        type="text" name="ConstructionStagePercent"
+                                                        [(ngModel)]="custProperty.ConstructionStagePercent">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="Approx_value"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Approx.
+                                                    Value</label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="Approx_value" class="form-control col" type="text"
+                                                        name="Approx_value" [(ngModel)]="custProperty.Approx_value">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div id="step-6">
+                                        <h2 class="StepTitle">Step 6 Customer Existing Loan Details </h2>
+                                        <form class="form-horizontal form-label-left">
+
+                                            <button type="button" class="btn btn-primary">Customer Existing Loan Details
+                                            </button>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input #ExistingLoan ngModel type="checkbox"> &nbsp;
+                                                    &nbsp; Do this customer has any Existing Active Loan?
+                                                </label>
+                                            </div>
+
+
+                                            <div class="form-group row">
+                                                <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                    for="Name_of_Institution">Name of Institution <span
+                                                        class="required">*</span>
+                                                </label>
+                                                <div class="col-md-6 col-sm-6 ">
+                                                    <input type="text" id="Name_of_Institution" required="required"
+                                                        class="form-control has-feedback-left"
+                                                        name="Name_of_Institution"
+                                                        [(ngModel)]="custExistLoan.Name_of_Institution"
+                                                        [disabled]="!ExistingLoan.checked">
+                                                    <span class="fa fa-user form-control-feedback left"
+                                                        aria-hidden="true"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                    for="ExistingLoan_Purpose_of_Loan">Purpose of Loan<span
+                                                        class="required">*</span>
+                                                </label>
+                                                <div class="col-md-6 col-sm-6 ">
+                                                    <input type="text" id="ExistingLoan_Purpose_of_Loan"
+                                                        required="required" class="form-control has-feedback-left"
+                                                        name="ExistingLoan_Purpose_of_Loan"
+                                                        [(ngModel)]="custExistLoan.ExistingLoan_Purpose_of_Loan"
+                                                        [disabled]="!ExistingLoan.checked">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="ExistingLoan_Disbursed_Loan_Amount"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Disbursed Loan
+                                                    Amount
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="ExistingLoan_Disbursed_Loan_Amount"
+                                                        class="form-control col" type="text"
+                                                        name="ExistingLoan_Disbursed_Loan_Amount"
+                                                        [(ngModel)]="custExistLoan.ExistingLoan_Disbursed_Loan_Amount"
+                                                        [disabled]="!ExistingLoan.checked">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="ExistingLoan_Emi"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">E
+                                                    M I
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="ExistingLoan_Emi" class="form-control col" type="text"
+                                                        name="ExistingLoan_Emi"
+                                                        [(ngModel)]="custExistLoan.ExistingLoan_Emi"
+                                                        [disabled]="!ExistingLoan.checked">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="ExistingLoan_Balance_Term"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Balance Term
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="ExistingLoan_Balance_Term" class="form-control col"
+                                                        type="text" name="ExistingLoan_Balance_Term"
+                                                        [(ngModel)]="custExistLoan.ExistingLoan_Balance_Term"
+                                                        [disabled]="!ExistingLoan.checked">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="ExistingLoan_Balance_Outstanding"
+                                                    class="col-form-label col-md-3 col-sm-3 label-align">Balance
+                                                    Outstanding
+                                                </label>
+                                                <div class="col-md-3 col-sm-3 ">
+                                                    <input id="ExistingLoan_Balance_Outstanding"
+                                                        class="form-control col" type="text"
+                                                        name="ExistingLoan_Balance_Outstanding"
+                                                        [(ngModel)]="custExistLoan.ExistingLoan_Balance_Outstanding"
+                                                        [disabled]="!ExistingLoan.checked">
+                                                </div>
+                                            </div>
+
+                                            <button type="button" class="btn btn-primary">Customer Loan Requirement
+                                            </button>
+
+                                            <div>
+                                                <div class="form-group row">
+                                                    <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                        for="Req_Purpose_of_Loan">Purpose of Loan<span
+                                                            class="required">*</span>
+                                                    </label>
+                                                    <div class="col-md-6 col-sm-6 ">
+                                                        <select class="select2_single form-control" tabindex="1"
+                                                            name="Req_Purpose_of_Loan"
+                                                            [(ngModel)]="custLoanReq.Purpose_of_Loan">
+                                                            <option value="Home Loan" selected="selected">Home Loan
+                                                            </option>
+                                                            <option value="Car Loan">Car Loan</option>
+                                                            <option value="Vehicle Loan">Vehicle Loan</option>
+                                                            <option value="Personal Loan">Personal Loan
+                                                            </option>
+                                                            <option value="Business Loan">Business Loan</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Req_Loan_Amount"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Loan Amount
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Req_Loan_Amount" class="form-control col" type="text"
+                                                            name="Req_Loan_Amount"
+                                                            [(ngModel)]="custLoanReq.Loan_Amount">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Req_Loan_Tenure"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Loan Tenure
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <select class="select2_single form-control" tabindex="1"
+                                                            name="Req_Loan_Tenure"
+                                                            [(ngModel)]="custLoanReq.Loan_Tenure">
+                                                            <option value="1" selected="selected">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4
+                                                            </option>
+                                                            <option value="5">5</option>
+
+                                                            <option value="6">6</option>
+
+                                                            <option value="7">7</option>
+
+                                                            <option value="8">8</option>
+
+                                                            <option value="9">9</option>
+
+                                                            <option value="10">10</option>
+
+                                                            <option value="11">11</option>
+
+                                                            <option value="12">12</option>
+
+                                                            <option value="13">13</option>
+
+                                                            <option value="14">14</option>
+
+                                                            <option value="15">15</option>
+
+                                                            <option value="16">16</option>
+
+                                                            <option value="17">17</option>
+
+                                                            <option value="18">18</option>
+
+                                                            <option value="19">19</option>
+
+                                                            <option value="20">20</option>
+
+                                                            <option value="21">21</option>
+
+                                                            <option value="22">22</option>
+
+                                                            <option value="23">23</option>
+
+                                                            <option value="24">24</option>
+
+                                                            <option value="25">25</option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="control-label col-md-3 col-sm-3 label-align">
+                                                        Intrest Option</label>
+                                                    <div class="col-md-2 col-sm-2 ">
+                                                        <select class="select2_single form-control" tabindex="1"
+                                                            name="Req_Interest_Option"
+                                                            [(ngModel)]="custLoanReq.Interest_Option">
+                                                            <option value="Other" selected="selected">Please Select
+                                                            </option>
+                                                            <option value="Fixed">Fixed</option>
+                                                            <option value="Varaiable">Variable</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="control-label col-md-3 col-sm-3 label-align">
+                                                        Payment Method</label>
+                                                    <div class="col-md-2 col-sm-2 ">
+                                                        <select class="select2_single form-control" tabindex="1"
+                                                            name="Req_Payment_Method"
+                                                            [(ngModel)]="custLoanReq.Payment_Method">
+                                                            <option value="Other" selected="selected">Other</option>
+                                                            <option value="Standard Repayment">Standard Repayment
+                                                            </option>
+                                                            <option value="Extended Repayment">Extended Repayment
+                                                            </option>
+                                                            <option value="Graduated Repayment">Graduated Repayment
+                                                            </option>
+                                                            <option value="Income-Contingent Repayment">
+                                                                Income-Contingent
+                                                                Repayment</option>
+                                                            <option value="Income-Sensitive Repayment">Income-Sensitive
+                                                                Repayment
+                                                            </option>
+                                                            <option value="Income-Based Repayment">Income-Based
+                                                                Repayment
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <button type="button" class="btn btn-primary">Custmor Loan Amount Details
+
+                                            </button>
+                                            <div>
+                                                <div class="form-group row">
+                                                    <label for="Land_cost"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Land
+                                                        cost</label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Land_cost" class="form-control col" type="text"
+                                                            name="Land_cost" [(ngModel)]="custLoanAmt.Land_cost">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Agreement_value"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Agreement
+                                                        Value
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Agreement_value" class="form-control col" type="text"
+                                                            name="Agreement_value"
+                                                            [(ngModel)]="custLoanAmt.Agreement_value">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Amenities_agreement"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Amenities
+                                                        Agreement Value
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Amenities_agreement" class="form-control col"
+                                                            type="text" name="Amenities_agreement"
+                                                            [(ngModel)]="custLoanAmt.Amenities_agreement">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Stamp_Duty_Reg_Charge"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Stamp Duty
+                                                        Registry Charges
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Stamp_Duty_Reg_Charge" class="form-control col"
+                                                            type="text" name="Stamp_Duty_Reg_Charge"
+                                                            [(ngModel)]="custLoanAmt.Stamp_Duty_Reg_Charge">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Cost_of_Contruction_Ext_Imp"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Cost of
+                                                        Construcation EXI IMP
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Cost_of_Contruction_Ext_Imp" class="form-control col"
+                                                            type="text" name="Cost_of_Contruction_Ext_Imp"
+                                                            [(ngModel)]="custLoanAmt.Cost_of_Construction_Ext_Imp">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Incidental"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Incidental
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Incidental" class="form-control col" type="text"
+                                                            name="Incidental" [(ngModel)]="custLoanAmt.Incidental">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Total_Requirement_funds"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Total
+                                                        Requirement Funds
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Total_Requirement_funds" class="form-control col"
+                                                            type="text" name="Total_Requirement_funds"
+                                                            [(ngModel)]="custLoanAmt.Total_Requirement_funds">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Amount_spent"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Amount
+                                                        Spent
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Amount_spent" class="form-control col" type="text"
+                                                            name="Amount_spent" [(ngModel)]="custLoanAmt.Amount_spent">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Balance_fund"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Balance
+                                                        Funds
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Balance_fund" class="form-control col" type="text"
+                                                            name="Balance_fund" [(ngModel)]="custLoanAmt.Balance_fund">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Savings"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Savings
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Savings" class="form-control col" type="text"
+                                                            name="Savings" [(ngModel)]="custLoanAmt.Savings">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Disposal_of_asset"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Disposal of
+                                                        Assets
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Disposal_of_asset" class="form-control col"
+                                                            type="text" name="Disposal_of_asset"
+                                                            [(ngModel)]="custLoanAmt.Disposal_of_asset">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Family"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Family
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Family" class="form-control col" type="text"
+                                                            name="Family" [(ngModel)]="custLoanAmt.Family">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Others"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Others
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Others" class="form-control col" type="text"
+                                                            name="Others" [(ngModel)]="custLoanAmt.Others">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Total_balance_fund"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Total
+                                                        Balance
+                                                        Funds
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Total_balance_fund" class="form-control col"
+                                                            type="text" name="Total_balance_fund"
+                                                            [(ngModel)]="custLoanAmt.Total_balance_fund">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Loan_requirement"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Loan
+                                                        Requriment
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Loan_requirement" class="form-control col"
+                                                            type="text" name="Loan_requirement"
+                                                            [(ngModel)]="custLoanAmt.Loan_requirement">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="Total_source_of_funds"
+                                                        class="col-form-label col-md-3 col-sm-3 label-align">Total
+                                                        Source of
+                                                        Funds
+                                                    </label>
+                                                    <div class="col-md-3 col-sm-3 ">
+                                                        <input id="Total_source_of_funds" class="form-control col"
+                                                            type="text" name="Total_source_of_funds"
+                                                            [(ngModel)]="custLoanAmt.Total_source_of_funds">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <a (click)="editCustPersonalDetails()"
+                                    class="buttonFinish buttonDisabled btn btn-default">Finish</a>
+                                <!-- End SmartWizard Content -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /page content -->
+    </div>
+</div>

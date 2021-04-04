@@ -1,0 +1,51 @@
+<div class="login">
+    <div class="login_wrapper">
+        <div class="animate form registration_form">
+            <section class="login_content">
+                <form>
+                    <h1>Create Account</h1>
+                    <div>
+                        <input type="text" name="firstName" class="form-control" placeholder="First Name" [(ngModel)]="firstName" required="" />
+                    </div>
+                    <div>
+                        <input type="text" name="middleName" class="form-control" placeholder="Middle Name" [(ngModel)]="middleName" required="" />
+                    </div>
+                    <div>
+                        <input type="text" name="lastName" class="form-control" placeholder="Last Name" [(ngModel)]="lastName" required="" />
+                    </div>
+                    <div>
+                        <input type="text" name="mobileNumber" class="form-control" placeholder="Mobile Number" [(ngModel)]="mobileNumber" required="" />
+                    </div>
+                    <div>
+                        <input type="email" name="email" class="form-control" placeholder="Email" [(ngModel)]="email" required="" />
+                    </div>
+                    <div>
+                        <input type="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="password" required="" />
+                    </div>
+                    <div>
+                        <input type="password" name="cnfPassword" class="form-control" placeholder="Confirm Password" [(ngModel)]="cnfPassword" required="" />
+                    </div>
+                    <div>
+                        <a class="btn btn-secondary text-decoration-none" role="button" aria-pressed="true" (click)="signUpFunction()">Submit</a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="separator">
+                        <p class="change_link">Already a member ?
+                            <a style="cursor: pointer;" (click)="goToLogin()" role="button" class="to_register"> Log in </a>
+                        </p>
+
+                        <div class="clearfix"></div>
+                        <br />
+
+                        <div>
+                            <h1><i class="fa fa-paw"></i> Loans 24</h1>
+                            <p>©2021 All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>

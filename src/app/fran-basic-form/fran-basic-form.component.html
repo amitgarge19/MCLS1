@@ -1,0 +1,250 @@
+<div class="container body">
+    <div class="main_container">
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="">
+                <div class="page-title">
+                    <div class="title_left">
+                        <h3>{{FranchiseeName}}'s Profile</h3>
+                    </div>
+
+                    <div class="title_right">
+                        <div class="col-md-5 col-sm-5  form-group row pull-right top_search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search for...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-secondary" type="button">Go!</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+
+                <div class="row">
+
+                    <div class="col-md-12 col-sm-12 ">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>Edit <small>your personal details</small></h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                            aria-haspopup="true" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a class="dropdown-item" href="#">Settings 1</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Settings 2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <br />
+                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                                    <div class="item form-group">
+                                        <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                            for="First Name">First Name <span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 ">
+                                            <input type="text" id="FirstName" required="required"
+                                                class="form-control has-feedback-left" name="firstName"
+                                                [(ngModel)]="firstName">
+                                            <span class="fa fa-user form-control-feedback left"
+                                                aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="item form-group">
+                                        <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                            for="Middle Name">Middle Name <span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 ">
+                                            <input type="text" id="MiddleName" required="required"
+                                                class="form-control has-feedback-left" name="middleName"
+                                                [(ngModel)]="middleName">
+                                            <span class="fa fa-user form-control-feedback left"
+                                                aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="item form-group">
+                                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="Last Name">Last
+                                            Name <span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 ">
+                                            <input type="text" id="LastName" required="required"
+                                                class="form-control has-feedback-left" name="lastName"
+                                                [(ngModel)]="lastName">
+                                            <span class="fa fa-user form-control-feedback left"
+                                                aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="item form-group">
+                                        <label class="col-form-label col-md-3 col-sm-3  label-align">Date of Birth<span
+                                                class="required">*</span></label>
+                                        <div class="col-md-3 col-sm-2">
+                                            <input class="form-control" class="date" type="date" name="dateOfBirth"
+                                                datetime="yyyy-MM-dd HH:mm:ss"
+                                                [ngModel]="dateOfBirth | date:'yyyy-MM-dd'"
+                                                (ngModelChange)="dateOfBirth = $event" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="item form-group">
+                                        <label class="col-form-label col-md-3 col-sm-3 label-align">Gender</label>
+                                        <div class="col-md-6 col-sm-6">
+                                            <div id="gender" class="form-control">
+                                                <label class="radio-inline">
+                                                    <input type="radio" value="Male" name="gender" [(ngModel)]="gender">
+                                                    &nbsp; Male &nbsp;
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="gender" value="Female"
+                                                        [(ngModel)]="gender">
+                                                    &nbsp; Female &nbsp;
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item form-group">
+                                        <label for="PAN Card"
+                                            class="col-form-label col-md-3 col-sm-3 label-align">PAN</label>
+                                        <div class="col-md-6 col-sm-6 ">
+                                            <input id="PAN Card" class="form-control col" type="text" name="PAN"
+                                                [(ngModel)]="PAN">
+                                        </div>
+                                    </div>
+
+                                    <div class="item form-group">
+                                        <label for="PAN Card" class="col-form-label col-md-3 col-sm-3 label-align">PAN
+                                            Card PDF</label>
+                                        <div class="col-md-6 col-sm-6 ">
+                                            <input id="PAN_Card_PDF" class="form-control col" type="file" name="PAN_PDF"
+                                                [(ngModel)]="PAN_PDF">
+                                        </div>
+                                    </div>
+
+                                    <div class="item form-group">
+                                        <label for="Aadhar Number"
+                                            class="col-form-label col-md-3 col-sm-3 label-align">Aadhar
+                                            Number</label>
+                                        <div class="col-md-6 col-sm-6 ">
+                                            <input id="Aadhar Number" class="form-control col" type="text" name="Aadhar"
+                                                [(ngModel)]="Aadhar">
+                                        </div>
+                                    </div>
+
+                                    <div class="item form-group">
+                                        <label for="Aadhar Card PDF"
+                                            class="col-form-label col-md-3 col-sm-3 label-align">Aadhar PDF</label>
+                                        <div class="col-md-6 col-sm-6 ">
+                                            <input id="Aadhar_Card_PDF" class="form-control col" type="file"
+                                                name="Aadhar_PDF" [(ngModel)]="Aadhar_PDF">
+                                        </div>
+                                    </div>
+
+                                    <div class="item form-group">
+                                        <label for="Mobile Number"
+                                            class="col-form-label col-md-3 col-sm-3 label-align">Mobile
+                                            Number</label>
+                                        <div class="col-md-6 col-sm-6 ">
+                                            <input id="Mobile Number" class="form-control col has-feedback-left"
+                                                type="text" value={{mobileNumber}} name="Mobile Number"
+                                                data-inputmask="'mask' : '(999) 999-9999'" disabled>
+                                            <span class="fa fa-mobile form-control-feedback left"
+                                                aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="item form-group">
+                                        <label for="Email"
+                                            class="col-form-label col-md-3 col-sm-3 label-align">Email</label>
+                                        <div class="col-md-6 col-sm-6 ">
+                                            <input id="Email" class="form-control col has-feedback-left" value={{email}}
+                                                type="text" name="Email" disabled>
+                                            <span class="fa fa-envelope form-control-feedback left"
+                                                aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="item form-group">
+                                        <label for="homeAddress"
+                                            class="col-form-label col-md-3 col-sm-3 label-align">Address <span
+                                                class="required">*</span> </label>
+                                        <div class="col-md-6 col-sm-6 ">
+                                            <textarea id="homeAddress" class="from-control col" type="text"
+                                                name="homeAddress" rows="5" [(ngModel)]="homeAddress"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="item form-group">
+                                        <label for="Add State"
+                                            class="col-form-label col-md-3 col-sm-3 label-align">State</label>
+                                        <div class="col-md-3 col-sm-3 ">
+                                            <input id="State" class="form-control col" type="text" name="AddState"
+                                                [(ngModel)]="AddState">
+                                        </div>
+                                    </div>
+
+                                    <div class="item form-group">
+                                        <label for="district"
+                                            class="col-form-label col-md-3 col-sm-3 label-align">District</label>
+                                        <div class="col-md-3 col-sm-3 ">
+                                            <input id="district" class="form-control col" type="text" name="district"
+                                                [(ngModel)]="district">
+                                        </div>
+                                    </div>
+
+                                    <div class="item form-group">
+                                        <label for="taluka"
+                                            class="col-form-label col-md-3 col-sm-3 label-align">Taluka</label>
+                                        <div class="col-md-3 col-sm-3 ">
+                                            <input id="taluka" class="form-control col" type="text" name="taluka"
+                                                [(ngModel)]="taluka">
+                                        </div>
+                                    </div>
+
+                                    <div class="item form-group">
+                                        <label for="city"
+                                            class="col-form-label col-md-3 col-sm-3 label-align">City/Village</label>
+                                        <div class="col-md-3 col-sm-3 ">
+                                            <input id="city" class="form-control col" type="text" name="city"
+                                                [(ngModel)]="city">
+                                        </div>
+                                    </div>
+
+                                    <div class="item form-group">
+                                        <label for="PinCode"
+                                            class="col-form-label col-md-3 col-sm-3 label-align">Pin-Code</label>
+                                        <div class="col-md-3 col-sm-3 ">
+                                            <input id="PinCode" class="form-control col" type="text" name="pinCode"
+                                                [(ngModel)]="pinCode">
+                                        </div>
+                                    </div>
+
+                                    <div class="ln_solid"></div>
+                                    <div class="item form-group">
+                                        <div class="col-md-6 col-sm-6">
+                                            <a (click)="goToProfile()" class="btn btn-primary">Cancel</a>
+                                            <a (click)="addFranchiseeDetails()" class="btn btn-primary">Finish</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /page content -->
+    </div>
+</div>

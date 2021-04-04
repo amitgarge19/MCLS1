@@ -1,0 +1,35 @@
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  right:0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;  
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  border-radius: 50% 0 0 50%;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #f21515;
+}
+
+.emi {
+  background: #2A3F54;
+  color: white;
+}
+
+.emi i {
+     color: white;
+}

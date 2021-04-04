@@ -1,0 +1,63 @@
+.left-title{
+    font-size: 15px;
+    font-weight: 500;
+    color: gray;
+}
+
+.result{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+h5,h6{
+    color: gray;
+}
+
+.active{
+    background-color: lightgray;
+}
+
+h1{
+    font-size: 35px;
+    color: gray;
+}
+
+@media only screen and (max-width: 768px) {
+    h1{
+        font-size: 15px;
+        color: gray;
+    }   
+}
+
+@media only screen and (min-width: 992px) {
+    h1{
+        font-size: 35px;
+        margin-bottom: -20px;   
+    }
+}
+
+#ecww-widgetwrapper{
+    min-width:250px;
+    width:100%;
+}
+
+#ecww-widget{
+    position:relative;
+    padding-top:0;
+    padding-bottom:280px;
+    height:0;
+    overflow:hidden;
+}
+
+#ecww-more{
+    background:#333;
+    font:normal 13px/1 Helvetica, Arial, Verdana, Sans-serif;
+    padding:10px 0;
+    color:#FFF;
+    text-align:center;
+    width:100%;
+    clear:both;
+    margin:0;
+    clear:both;
+    float:left;
+}

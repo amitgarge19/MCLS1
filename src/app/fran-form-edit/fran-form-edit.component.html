@@ -1,0 +1,469 @@
+<div class="container body">
+  <div class="main_container">    
+    <!-- page content -->
+    <div class="right_col" role="main">
+      <div class="">
+        <div class="page-title">
+          <div class="title_left">
+            <h3>{{FranchiseeName}}'s Profile</h3>
+          </div>
+
+          <div class="title_right">
+            <div class="col-md-5 col-sm-5  form-group row pull-right top_search">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                  <button class="btn btn-secondary" type="button">Go!</button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="row">
+
+          <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+              <div class="x_title">
+                <h2>Edit<small>Franchisee</small></h2>
+                <ul class="nav navbar-right panel_toolbox">
+                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i
+                        class="fa fa-wrench"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Settings 1</a>
+                      </li>
+                      <li><a href="#">Settings 2</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="close-link"><i class="fa fa-close"></i></a>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+
+              <div class="x_content">
+                <!-- Smart Wizard -->
+                <div id="wizard" class="form_wizard wizard_horizontal">
+                  <ul class="wizard_steps">
+                    <li>
+                      <a href="#step-1">
+                        <span class="step_no">1</span>
+                        <span class="step_descr">
+                          Step 1<br />
+                          <small>Personal Details</small>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#step-2">
+                        <span class="step_no">2</span>
+                        <span class="step_descr">
+                          Step 2<br />
+                          <small>Office Details</small>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#step-3">
+                        <span class="step_no">3</span>
+                        <span class="step_descr">
+                          Step 3<br />
+                          <small>Bank Details</small>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#step-4">
+                        <span class="step_no">4</span>
+                        <span class="step_descr">
+                          Step 4<br />
+                          <small>Step 4</small>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <div id="step-1">
+                    <h2 class="StepTitle">Step 1 Franchisee Personal Details</h2>
+                    <form class="form-horizontal form-label-left">
+
+                      <div class="form-group row">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="First Name">First Name <span
+                            class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" id="FirstName" required="required" class="form-control has-feedback-left"
+                            name="firstName" [(ngModel)]="Personal.firstName">
+                          <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="Middle Name">Middle Name <span
+                            class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" id="MiddleName" required="required" class="form-control has-feedback-left"
+                            name="middleName" [(ngModel)]="Personal.middleName">
+                          <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="Last Name">Last
+                          Name <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" id="LastName" required="required" class="form-control has-feedback-left"
+                            name="lastName" [(ngModel)]="Personal.lastName">
+                          <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-form-label col-md-3 col-sm-3  label-align">Date of Birth<span
+                            class="required">*</span></label>
+                        <div class="col-md-3 col-sm-2">
+                          <input class="form-control" class="date" type="date" name="dateOfBirth"
+                            datetime="yyyy-MM-dd HH:mm:ss" [ngModel]="Personal.dateOfBirth | date:'yyyy-MM-dd'"
+                            (ngModelChange)="Personal.dateOfBirth = $event" required></div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Gender</label>
+                        <div class="col-md-6 col-sm-6">
+                          <div id="gender" class="form-control">
+                            <label class="radio-inline">
+                              <input type="radio" value="Male" name="gender" [(ngModel)]="Personal.gender">
+                              &nbsp; Male &nbsp;
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="gender" value="Female" [(ngModel)]="Personal.gender">
+                              &nbsp; Female &nbsp;
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="PAN Card" class="col-form-label col-md-3 col-sm-3 label-align">PAN</label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input id="PAN Card" class="form-control col" type="text" name="PAN"
+                            [(ngModel)]="Personal.pan">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="Aadhar Number" class="col-form-label col-md-3 col-sm-3 label-align">Aadhar
+                          Number</label>
+                        <div class="col-md-6 col-sm-6">
+                          <input id="Aadhar Number" class="form-control col" type="text" name="Aadhar"
+                            [(ngModel)]="Personal.aadhar">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="Mobile Number" class="col-form-label col-md-3 col-sm-3 label-align">Mobile
+                          Number</label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input id="Mobile Number" class="form-control col has-feedback-left" type="text"
+                            value={{Personal.mobileNumber}} name="Mobile Number"
+                            data-inputmask="'mask' : '(999) 999-9999'" disabled>
+                          <span class="fa fa-mobile form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="Email" class="col-form-label col-md-3 col-sm-3 label-align">Email</label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input id="Email" class="form-control col has-feedback-left" value={{Personal.email}}
+                            type="text" name="Email" disabled>
+                          <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="homeAddress" class="col-form-label col-md-3 col-sm-3 label-align">Address <span
+                            class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <textarea id="homeAddress" class="from-control col" type="text" name="homeAddress" rows="5"
+                            [(ngModel)]="Personal.homeAddress"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="city" class="col-form-label col-md-3 col-sm-3 label-align">City</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="city" class="form-control col" type="text" name="city" [(ngModel)]="Personal.city">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="taluka" class="col-form-label col-md-3 col-sm-3 label-align">Taluka</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="taluka" class="form-control col" type="text" name="taluka"
+                            [(ngModel)]="Personal.taluka">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="district" class="col-form-label col-md-3 col-sm-3 label-align">District</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="district" class="form-control col" type="text" name="district"
+                            [(ngModel)]="Personal.district">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="PinCode" class="col-form-label col-md-3 col-sm-3 label-align">Pin-Code</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="PinCode" class="form-control col" type="text" name="pinCode"
+                            [(ngModel)]="Personal.pinCode">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="Add State" class="col-form-label col-md-3 col-sm-3 label-align">State</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="State" class="form-control col" type="text" name="AddState"
+                            [(ngModel)]="Personal.AddState">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+                  <div id="step-2">
+                    <h2 class="StepTitle">Step 2 Franchisee Office</h2>
+                    <form class="form-horizontal form-label-left">
+
+                      <div class="form-group row">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="OfficeName">Office Name
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" id="OfficeName" name="FranOffice.franOffName" required="required"
+                            class="form-control" [(ngModel)]="FranOffice.franOffName">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="middle-name" class="col-form-label col-md-3 col-sm-3 label-align">Mobile / Telephone
+                          no.</label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input id="OffNumber" class="form-control col has-feedback-left" type="text"
+                            name="FranOffice.OffNumber" data-inputmask="'mask' : '(999) 999-9999'"
+                            [(ngModel)]="FranOffice.OffNumber">
+                          <span class="fa fa-mobile form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Shop / Office</label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <div id="OffType" class="form-control">
+                            <label class="radio-inline">
+                              <input type="radio" value="Rented" name="FranOffice.OffType"
+                                [(ngModel)]="FranOffice.OffType">
+                              &nbsp; Rented &nbsp;
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="FranOffice.OffType" value="Owned"
+                                [(ngModel)]="FranOffice.OffType">
+                              &nbsp; Owned &nbsp;
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="middle-name" class="col-form-label col-md-3 col-sm-3 label-align">Address <span
+                            class="required">*</span> </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <textarea id="OffAddress" class="from-control col" type="text" name="FranOffice.OffAddress"
+                            rows="5" [(ngModel)]="FranOffice.OfficeAddress"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="OffCity" class="col-form-label col-md-3 col-sm-3 label-align">City</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="OffCity" class="form-control col" type="text" name="FranOffice.OffCity"
+                            [(ngModel)]="FranOffice.Officecity">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="OffTaluka" class="col-form-label col-md-3 col-sm-3 label-align">Taluka</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="OffTaluka" class="form-control col" type="text" name="FranOffice.Officetaluka"
+                            [(ngModel)]="FranOffice.Officetaluka">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="OffDistrict" class="col-form-label col-md-3 col-sm-3 label-align">District</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="OffDistrict" class="form-control col" type="text" name="FranOffice.Officedistrict"
+                            [(ngModel)]="FranOffice.Officedistrict">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="OffPinCode" class="col-form-label col-md-3 col-sm-3 label-align">PinCode</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="OffPinCode" class="form-control col" type="text" name="FranOffice.OfficepinCode"
+                            [(ngModel)]="FranOffice.OfficepinCode">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="OffState" class="col-form-label col-md-3 col-sm-3 label-align">State</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="OffState" class="form-control col" type="text" name="FranOffice.OfficeState"
+                            [(ngModel)]="FranOffice.OfficeState">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+                  <div id="step-3">
+                    <h2 class="StepTitle">Step 3 Bank Details</h2>
+                    <form class="form-horizontal form-label-left">
+
+                      <div class="form-group row">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="bankName"> Bank Name
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" id="bankName" name="FranBank.Bank_Name" required="required"
+                            class="form-control" [(ngModel)]="FranBank.Bank_Name">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="Bank Acount No" class="col-form-label col-md-3 col-sm-3 label-align">Account
+                          No.</label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input id="AccountNumber" class="form-control col" type="text" name="FranBank.Account_Number"
+                            [(ngModel)]="FranBank.Account_Number">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Account Type</label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <div id="AccountType" class="form-control">
+                            <label class="radio-inline">
+                              <input type="radio" value="Savings" name="FranBank.Account_Type"
+                                [(ngModel)]="FranBank.Account_Type">
+                              &nbsp; Savings &nbsp;
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="FranBank.Account_Type" value="Current"
+                                [(ngModel)]="FranBank.Account_Type">
+                              &nbsp; Current &nbsp;
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">IFSC<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" id="IFSC" class="date-picker form-control" name="FranBank.IFSC"
+                            [(ngModel)]="FranBank.IFSC" required="required">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="Branch_Address" class="col-form-label col-md-3 col-sm-3 label-align">Address
+                          <span class="required">*</span> </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <textarea id="Branch_Address" class="from-control col" type="text"
+                            name="FranBank.Branch_Address" rows="5" [(ngModel)]="FranBank.Branch_Address"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="BankCity" class="col-form-label col-md-3 col-sm-3 label-align">City</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="BankCity" class="form-control col" type="text" name="FranBank.Bank_City"
+                            [(ngModel)]="FranBank.Bank_City">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="BankTaluka" class="col-form-label col-md-3 col-sm-3 label-align">Taluka</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="BankTaluka" class="form-control col" type="text" name="FranBank.Bank_Taluka"
+                            [(ngModel)]="FranBank.Bank_Taluka">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="BankDistrict" class="col-form-label col-md-3 col-sm-3 label-align">District</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="BankDistrict" class="form-control col" type="text" name="FranBank.Bank_District"
+                            [(ngModel)]="FranBank.Bank_District">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="BankPinCode" class="col-form-label col-md-3 col-sm-3 label-align">Pin-Code</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="BankPinCode" class="form-control col" type="text" name="FranBank.Bank_PinCode"
+                            [(ngModel)]="FranBank.Bank_PinCode">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="BankState" class="col-form-label col-md-3 col-sm-3 label-align">State</label>
+                        <div class="col-md-3 col-sm-3 ">
+                          <input id="BankState" class="form-control col" type="text" name="FranBank.Bank_State"
+                            [(ngModel)]="FranBank.Bank_State">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+                  <div id="step-4">
+                    <h2 class="StepTitle">Step 4 Content</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                      mollit anim id est laborum.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                      occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                      occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                  </div>
+                </div>
+                <a (click)="updateFranOfficeDetails()" class="buttonFinish btn btn-default">Update</a>
+                <!-- End SmartWizard Content -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /page content -->   
+  </div>
+</div>
